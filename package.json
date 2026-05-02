@@ -2,13 +2,19 @@
   "name": "amity",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://jz1221.github.io/amity",
   "main": "index.js",
   "scripts": {
     "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "npm run start --prefix backend"
+    "start": "npm run start --prefix backend",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d frontend/build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
